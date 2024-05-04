@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial.sclae=1.0">
+        <title>Login de Inicio</title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="container mt-5">
+            {% load static %}
+            <h2 class="mb-4">Listado de Juegos</h2>
+            {% csrf_token %}
+            <div class="container mt-5">
+                <a ref="form-inventario" class="btn btn-primary mb-3">Ingresar Juego</a>
+                <a href="form-api" class="btn btn-primary mb-3">API Rest FRONT</a>
+                <a href="form-api-back" class="btn btn-primary mb-3">API Rest BACK</a>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">ID Inventario</th>
+                            <th scope="col">Nombre Producto</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Imagen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for inv in inventario %}
+                            <tr>
+                                <td>{{inv.id_inventario}}</td>
+                                <td>{{inv.nombre}}</td>
+                                <td>{{inv.modelo}}</td>
+                                {% if inv.imagen %}
+                                    <td><img src="{{ inv.imagen.url}}" alt="{{inv.id_inventario}}" style="max-width: 100px;"></td>
+                                {% else %}
+                                    <td>No hay imagen</td>
+                                {% endif %}
+                                <td><a href="{% url 'form_mod_inventario' inv.id_inventario %}">Modificar</a></td>
+                                <td><a href="{% url 'form_del_inventario' inv.id_inventario %}">Eliminar</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+                    
+            </div>
+        </div>
+    </body>
+</html>

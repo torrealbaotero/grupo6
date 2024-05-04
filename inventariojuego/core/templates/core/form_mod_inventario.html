@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Inventario</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Edición de producto</h2>
+    <form method="post" action="" id="formulario" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class = "form-group">
+         {{ form.as_table }}
+        
+      </div>
+         <button type="submit" class="btn btn-primary" value="Modificar">Enviar</button>
+       </form>
+       <div class="alert alert-success" role="alert">
+            {{mensaje}}
+       </div>
+  </div>
+</body>
+</html>

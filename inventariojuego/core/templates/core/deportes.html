@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría: Deportes</title>
+    <link rel="stylesheet" href="{% static 'CSS/styles_deportes.css' %}">
+    <script src="Java/script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Categoría: Deportes</h1>
+        <p>¡Prepárate para la emoción del deporte! En los juegos de arcade deportivos, podrás experimentar la intensidad de competir en deportes como fútbol, baloncesto o carreras, enfrentándote a desafíos rápidos y llenos de acción en cada jugada.</p>
+    </header>
+
+    <main>
+        <h2>Juegos Deportivos</h2>
+        <div class="juego">
+            <a href="Sub-categoria-deportes/fifa-23.html">
+                <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000047794/40f9e2f6d344d2607d4be72c6c4ebd3c18717ff87a56d6bbc303c42e58dd570d" alt="Fifa23">
+                <h3>FIFA 23</h3>
+                <p>Valor: $65.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('FIFA 23', 65990)">Agregar al carrito</button>
+        </div>
+
+        <div class="juego">
+            <a href="Sub-categoria-deportes/rocket-league.html">
+                <img src="https://fs-prod-cdn.nintendo-europe.com/media/images/10_share_images/games_15/nintendo_switch_download_software_1/H2x1_NSwitchDS_RocketLeague.jpg" alt="Rocketleague">
+                <h3>Rocket League</h3>
+                <p>Valor: $20.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Rocket League', 20990)">Agregar al carrito</button>
+        </div>
+
+        <div class="juego">
+            <a href="Sub-categoria-deportes/fishing-simulator.html">
+                <img src="https://store-images.s-microsoft.com/image/apps.44021.14268289244426821.7d43bae5-a3ee-4830-a817-2e1c18d4613f.93569c97-ff1a-4123-9a0e-7208dc1aa671?mode=scale&q=90&h=1080&w=1920" alt="Fishingsimulator">
+                <h3>Fishing Simulator</h3>
+                <p>Valor: $16.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Fishing Simulator', 16990)">Agregar al carrito</button>
+        </div>
+        
+        <div class="juego">
+            <a href="Sub-categoria-deportes/dredge.html">
+                <img src="https://media.vandal.net/m/8-2022/202282917303769_1.jpg" alt="Dregde">
+                <h3>DREDGE</h3>
+                <p>Valor: $26.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('DREDGE', 26990)">Agregar al carrito</button>
+        </div>
+
+        <div class="buscar">
+            <input type="text" id="busqueda" placeholder="Buscar juego...">
+            <button onclick="buscarJuego()">Buscar</button>
+        </div>
+
+        <a href="{%url 'inicio' %}">Volver al Inicio</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pirata Games</p>
+    </footer>
+    <script>
+        function agregarAlCarrito(nombreJuego, precioJuego) {
+            let juego = {
+                nombre: nombreJuego,
+                precio: precioJuego
+            };
+
+
+            alert(`Se ha añadido "${nombreJuego}" al carrito.`);
+        }
+    </script>
+
+</body>
+</html>

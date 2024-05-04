@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría: Arcade</title>
+    <link rel="stylesheet" href="{% static 'CSS/styles_arcade.css' %}">
+    <script src="Java/script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Categoría: Arcade</h1>
+        <p>Ven y sumérgete en emocionantes desafíos! En los juegos de arcade, te enfrentarás a situaciones intensas como combates, disparos y rápidos desafíos de habilidad mientras avanzas en niveles llenos de acción.</p>
+    </header>
+
+    <main>
+        <h2>Juegos de Arcade</h2>
+        <div class="juego">
+            <a href="Sub-categoria-arcade/sons-of-valhalla.html">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/1409830/capsule_616x353.jpg?t=1710504703" alt="Sonsofvalhalla">
+                <h3>Sons of Valhalla</h3>
+                <p>Valor: $35.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Sons of Valhalla', 35990)">Agregar al carrito</button>
+        </div>
+        <div class="juego">
+            <a href="Sub-categoria-arcade/lost-in-random.html">
+                <img src="https://assets-prd.ignimgs.com/2020/06/19/lost-in-radom-button-02-1592550509758.jpg" alt="Lostinrandom">
+                <h3>Lost in Random</h3>
+                <p>Valor: $25.000 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Lost in Random', 25000)">Agregar al carrito</button>
+        </div>
+
+        <div class="juego">
+            <a href="Sub-categoria-arcade/lego-brawls.html">
+                <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70010000046171/d319090de87c6f8aaa499abcb690fb5b395f902ae22139cc7619385e6be80959" alt="Legobrawls">
+                <h3>Lego Brawls</h3>
+                <p>Valor: $45.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Lego Brawls', 45990)">Agregar al carrito</button>
+        </div>
+        <div class="juego">
+            <a href="Sub-categoria-arcade/slime-rancher.html">
+                <img src="https://i.ytimg.com/vi/eBrVO902Mgc/maxresdefault.jpg" alt="Slimerancher">
+                <h3>Slime Rancher</h3>
+                <p>Valor: $24.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Slime Rancher', 24990)">Agregar al carrito</button>
+        </div>
+
+        <a href="{%url 'inicio' %}">Volver al Inicio</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pirata Games</p>
+    </footer>
+
+    <script>
+        function agregarAlCarrito(nombreJuego, precioJuego) {
+            alert('El juego "' + nombreJuego + '" se ha añadido al carrito.');
+        }
+    </script>
+</body>
+</html>

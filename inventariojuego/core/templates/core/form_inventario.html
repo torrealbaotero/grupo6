@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario de Ingreso de productos</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Formulario de Vehículo</h2>
+    <form method="post" action="" id="formulario" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class = "form-group">
+           {{ form.as_table }}
+          
+        </div>
+         <button type="submit" class="btn btn-primary">Enviar</button>
+         <button type="button" class="btn btn-secondary" onclick="limpiarFormulario()">Limpiar</button>
+       </form>
+       <div class="alert alert-success" role="alert">
+            {{ mensaje }}
+       </div>
+  </div>
+
+  <!-- Bootstrap JS (opcional, si necesitas funcionalidades específicas de Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+  <script>
+    // Función para limpiar el formulario
+    function limpiarFormulario() {
+      document.getElementById("formulario").reset();
+    }
+  </script>
+</body>
+</html>

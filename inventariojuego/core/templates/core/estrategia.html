@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría: Estrategia</title>
+    <link rel="stylesheet" href="{% static 'CSS/styles_estrategia.css' %}">
+    <script src="Java/script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Categoría: Estrategia</h1>
+        <p>¡Demuestra tu astucia en los juegos de arcade de estrategia! Enfréntate a desafíos tácticos emocionantes mientras planificas tus movimientos y tomas decisiones rápidas en entornos llenos de acción y sorpresas.</p>
+        <a href="carrito.html">Ver carrito</a> 
+    </header>
+
+    <main>
+        <h2>Juegos de Estrategia</h2>
+        <div class="juego">
+            <a href="sub-categoria-estrategia/starcraft-ii-legacy-of-the-void.html">
+                <img src="https://m.media-amazon.com/images/I/91SACWlwQ4L.jpg" alt="StarcraftIIlegacyofthevoid">
+                <h3>StarCraft II: Legacy of the Void</h3>
+                <p>Valor: $32.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('StarCraft II: Legacy of the Void', 32990)">Agregar al carrito</button>
+        </div>
+
+        <div class="juego">
+            <a href="sub-categoria-estrategia/heroes-of-the-storm.html">
+                <img src="https://static.heroesofthestorm.com/images/global/fb-share-1fcc54becc.jpg" alt="Heroesofthestorm">
+                <h3>Heroes of the Storm</h3>
+                <p>Valor: $27.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Heroes of the Storm', 27990)">Agregar al carrito</button>
+        </div>
+        
+        <div class="juego">
+            <a href="sub-categoria-estrategia/wasteland-3.html">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/45/Wasteland_3_cover_art.jpg/220px-Wasteland_3_cover_art.jpg" alt="Wasteland3">
+                <h3>Wasteland 3</h3>
+                <p>Valor: $22.000 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Wasteland 3', 22000)">Agregar al carrito</button>
+        </div>
+        
+        <div class="juego">
+            <a href="sub-categoria-estrategia/age-of-empires-ii-definitive-edition.html">
+                <img src="https://static.wikia.nocookie.net/ageofempires/images/9/95/Age2de-library-boxart.jpg.jpg/revision/latest?cb=20221101191630&path-prefix=es" alt="AgeofempiresII">
+                <h3>Age of Empires II: Definitve Edition</h3>
+                <p>Valor: $15.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Age of Empires II: Definitve Edition', 15990)">Agregar al carrito</button>
+        </div>
+
+        <div class="buscar">
+            <input type="text" id="busqueda" placeholder="Buscar juego...">
+            <button onclick="buscarJuego()">Buscar</button>
+        </div>
+
+        <a href="{%url 'inicio' %}">Volver al Inicio</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pirata Games</p>
+    </footer>
+    <script>
+        function agregarAlCarrito(nombreJuego, precioJuego) {
+            let juego = {
+                nombre: nombreJuego,
+                precio: precioJuego
+            };
+
+            alert(`Se ha añadido "${nombreJuego}" al carrito.`);
+        }
+    </script>
+
+</body>
+</html>

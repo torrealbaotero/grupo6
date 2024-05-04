@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API FRONT</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2>Listado de Juegos API FRONT</h2>
+    <div class="row" id="juegos"></div>
+  </div>
+  <script>
+    $(document).ready(function(){
+      const URL ="https://rawg.io/"
+      var id_juegos = $("#juegos");
+
+      
+      function addJuego(juego){
+        id_juegos.append(
+          `
+          <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+              <img src="${juego.image}" class="card-img-top" alt="...">
+              <div class="card-body">
+                      <h5 class="card-title">${juego.name}</h5>
+                      <p class="card-text">Especie:${juego.species} </p>
+                      <p class="card-text">Genero:${juego.gender} </p>
+                  </div>
+              </div> 
+          </div>
+          `
+        )
+      }
+      function obtenerJuegos(){
+        $.ajax({
+          url: URL,
+          method: "GET",
+          success: function(data){
+            console.log(data.result);
+            var juegos = data.results;
+            juegos.forEach(addJuego);
+          }
+        })
+      }
+      obtenerJuegos();
+    });
+  </script>
+</body>
+</html>

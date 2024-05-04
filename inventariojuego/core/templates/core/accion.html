@@ -1,0 +1,83 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría: Acción</title>
+    <link rel="stylesheet" href="{% static 'CSS/styles_accion.css' %}">
+    <script src="Java/script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Categoría: Acción</h1>
+        <p> Ven y sientete en la piel de un personaje, deberás enfrentar situaciones intensas y rápidas, como combates, disparos y desafíos de habilidad, todo mientras avanzas a través de niveles emocionantes y llenos de acción
+        </p>
+    </header>
+
+    <main>
+        <h2>Juegos de Acción</h2>
+        <div class="juego">
+            <a href="sub-categoria-accion/elden-ring.html">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/aGhopp3MHppi7kooGE2Dtt8C.png" alt="Eldenring">
+                <h3>Elden Ring</h3>
+                <p>Valor: $56.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Elden Ring', 56990)">Agregar al carrito</button>
+        </div>
+
+        <div class="juego">
+            <a href="sub-categoria-accion/doom-eternal.html">
+                <img src="https://assets.nintendo.com/image/upload/c_fill,w_1200/q_auto:best/f_auto/dpr_2.0/ncom/software/switch/70070000011025/09fde58766118f7aec9f6ff30f3a8d6e7ba37ace336e79097643431c911d99c1" alt="Doometernal">
+                <h3>Doom Eternal</h3>
+                <p>Valor: $49.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Doom Eternal', 49990)">Agregar al carrito</button>
+        </div>
+
+        <div class="juego">
+            <a href="sub-categoria-accion/diablo-iv.html">
+                <img src="https://blz-contentstack-images.akamaized.net/v3/assets/blt77f4425de611b362/blt6d7b0fd8453e72b9/646e720a71d9db111a265e8c/d4-open-graph_001.jpg" alt="Diablo4">
+                <h3>Diablo IV</h3>
+                <p>Valor: $70.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Diablo IV', 70990)">Agregar al carrito</button>
+        </div>
+
+        <div class="juego">
+            <a href="sub-categoria-accion/raise-of-tomb-raider.html">
+                <img src="https://upload.wikimedia.org/wikipedia/en/2/29/Rise_of_the_Tomb_Raider.jpg" alt="Riseofthetombraider">
+                <h3>Raise of the Tomb Raider</h3>
+                <p>Valor: $40.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Raise of the Tomb Raider', 40990)">Agregar al carrito</button>
+        </div>
+    </main>
+
+    <form action="buscar.html" method="get">
+        <input type="text" name="busqueda" placeholder="Buscar juego...">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <a href="{%url 'inicio' %}">Volver al Inicio</a>
+
+    <footer>
+        <p>&copy; 2024 Pirata Games</p>
+    </footer>
+
+    <script>
+        function agregarAlCarrito(nombreJuego, precioJuego) {
+            let juego = {
+                nombre: nombreJuego,
+                precio: precioJuego
+            };
+
+
+            alert(`Se ha añadido "${nombreJuego}" al carrito.`);
+        }
+    </script>
+
+</body>
+</html>

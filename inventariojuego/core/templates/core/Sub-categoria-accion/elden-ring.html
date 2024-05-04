@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elden Ring</title>
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Elden Ring</h1>
+    </header>
+
+    <main>
+        <div class="juego-info">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202110/2000/aGhopp3MHppi7kooGE2Dtt8C.png" alt="Elden Ring">
+            <h2>Elden Ring</h2>
+            <p>Valor: $56.990 CLP</p>
+            <p>Descripción: Elden Ring es un juego de rol de acción desarrollado por FromSoftware, conocido por su serie Souls, y escrito por Hidetaka Miyazaki, el director de los juegos Souls y Bloodborne. El juego presenta un vasto mundo abierto, una jugabilidad desafiante y una atmósfera oscura y misteriosa.</p>
+
+            <div class="comentarios">
+                <h3>Comentarios</h3>
+
+            </div>
+
+            <button onclick="agregarAlCarrito()">Añadir al carrito</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pirata Games</p>
+    </footer>
+
+    <script src="script.js"></script> 
+    <script>
+        function agregarAlCarrito() {
+
+            alert('El juego se ha añadido al carrito');
+        }
+    </script>
+
+</body>
+</html>

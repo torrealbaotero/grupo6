@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría: Supervivencia</title>
+    <link rel="stylesheet" href="{% static 'CSS/styles_supervivencia.css' %}">
+    <script src="Java/script.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Categoría: Supervivencia</h1>
+        <p>¡Siente la adrenalina de la supervivencia en los juegos de arcade! Enfréntate a desafíos implacables mientras luchas por sobrevivir en entornos hostiles llenos de peligros y obstáculos, tomando decisiones rápidas y estratégicas para mantenerte con vida.</p>
+    </header>
+
+    <main>
+        <h2>Juegos de Supervivencia</h2>
+        <div class="juego">
+            <a href="sub-categoria-supervivencia/subnautica.html">
+                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/6/6d/Subnautica_cover_art.png/220px-Subnautica_cover_art.png" alt="Subnautica">
+                <h3>Subnautica</h3>
+                <p>Valor: $12.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Subnautica')">Agregar al carrito</button>
+        </div>
+
+        <div class="juego">
+            <a href="sub-categoria-supervivencia/the-forest.html">
+                <img src="https://media.vandal.net/m/4-2018/201841318231_1.jpg" alt="Theforest">
+                <h3>The Forest</h3>
+                <p>Valor: $28.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('The Forest')">Agregar al carrito</button>
+        </div>
+
+        <div class="juego">
+            <a href="sub-categoria-supervivencia/death-stranding.html">
+                <img src="https://i.blogs.es/4f910f/caratula-del-juego/450_1000.jpg" alt="Deathstranding">
+                <h3>Death Stranding</h3>
+                <p>Valor: $36.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Death Stranding')">Agregar al carrito</button>
+        </div>
+        
+        <div class="juego">
+            <a href="sub-categoria-supervivencia/the-war-of-mine.html">
+                <img src="https://cdn.akamai.steamstatic.com/steam/apps/282070/capsule_616x353.jpg?t=1709638398" alt="Thewarofmine">
+                <h3>The War of Mine</h3>
+                <p>Valor: $10.500 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('The War of Mine')">Agregar al carrito</button>
+        </div>
+
+        <div class="buscar">
+            <input type="text" id="busqueda" placeholder="Buscar juego...">
+            <button onclick="buscarJuego()">Buscar</button>
+        </div>
+
+        <a href="{% url 'inicio' %}">Volver al Inicio</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pirata Games</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function agregarAlCarrito(nombreJuego) {
+            alert('Se ha añadido "' + nombreJuego + '" al carrito.');
+
+        }
+    </script>
+
+</body>
+</html>

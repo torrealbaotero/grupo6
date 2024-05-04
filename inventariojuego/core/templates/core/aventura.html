@@ -1,0 +1,76 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría: Aventura</title>
+    <link rel="stylesheet" href="{% static 'CSS/styles_aventura.css' %}">
+    <script src="Java/script.js"></script>
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Categoría: Aventura</h1>
+        <p>¡Embárcate en emocionantes aventuras! En los juegos de aventura, te sumergirás en desafíos intensos como combates, disparos y pruebas de habilidad mientras exploras niveles llenos de acción y misterio.</p>
+    </header>
+
+    <main>
+        <h2>Juegos de Aventura</h2>
+        <div class="juego" onclick="redireccionar('Sub-categoria-aventura/god-of-war-ragnarok.html')">
+            <img src="https://media.tycsports.com/files/2022/07/19/454241/god-of-war-ragnaroek-se-confirmo-como-sera-su-historia_862x485.webp" alt="Godofwar">
+            <h3>God of War - Ragnarok</h3>
+            <p>Valor: $55.990 CLP</p>
+            <button onclick="agregarAlCarrito('God of War - Ragnarok', 55990)">Agregar al carrito</button>
+        </div>
+
+        <div class="juego" onclick="redireccionar('Sub-categoria-aventura/the-last-of-us.html')">
+            <img src="https://static.wikia.nocookie.net/thelastofus/images/f/fe/Portada_Parte_I_limpia.jpeg/revision/latest?cb=20211209015400&path-prefix=es" alt="Thelastofus">
+            <h3>The Last of Us</h3>
+            <p>Valor: $24.990 CLP</p>
+            <button onclick="agregarAlCarrito('The Last of Us', 24990)">Agregar al carrito</button>
+        </div>
+
+        <div class="juego" onclick="redireccionar('Sub-categoria-aventura/horizon-zero-dawn.html')">
+            <img src="https://static.wikia.nocookie.net/doblaje/images/c/cc/1681116948536_2a9g8n_2_0.jpg/revision/latest?cb=20230410090038&path-prefix=es" alt="Horizonzerodawn">
+            <h3>Horizon Zero Dawn</h3>
+            <p>Valor: $20.990 CLP</p>
+            <button onclick="agregarAlCarrito('Horizon Zero Dawn', 20990)">Agregar al carrito</button>
+        </div>
+        
+        <div class="juego" onclick="redireccionar('Sub-categoria-aventura/spider-man.html')">
+            <img src="https://image.api.playstation.com/vulcan/ap/rnd/202009/3021/B2aUYFC0qUAkNnjbTHRyhrg3.png" alt="Spider-man">
+            <h3>Spider-Man</h3>
+            <p>Valor: $47.990 CLP</p>
+            <button onclick="agregarAlCarrito('Spider-Man', 47990)">Agregar al carrito</button>
+        </div>
+
+        <div class="buscar">
+            <input type="text" id="busqueda" placeholder="Buscar juego...">
+            <button onclick="buscarJuego()">Buscar</button>
+        </div>
+
+        <a href="{%url 'inicio' %}">Volver al Inicio</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pirata Games</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        function redireccionar(pagina) {
+            window.location.href = pagina;
+        }
+
+        function agregarAlCarrito(nombreJuego, precioJuego) {
+
+            alert('El juego "' + nombreJuego + '" se ha añadido al carrito.');
+        }
+    </script>
+
+</body>
+</html>

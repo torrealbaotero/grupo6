@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="{% static 'CSS/styles_carrito.css' %}">
+</head>
+
+<body>
+
+    <header>
+        <h1>Carrito de Compras</h1>
+    </header>
+
+    <main>
+        <h2>Lista de Juegos</h2>
+        <ul id="lista-juegos">
+
+        </ul>
+
+        <div class="total">
+            <h3>Total:</h3>
+            <p id="total-precio">$0.00 CLP</p>
+        </div>
+
+        <div class="botones">
+            <button onclick="realizarCompra()">Realizar Compra</button>
+            <button onclick="vaciarCarrito()">Vaciar Carrito</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pirata Games</p>
+    </footer>
+
+    <script src="Java/script.js"></script>
+    <script>
+        
+    </script>
+
+</body>
+</html>

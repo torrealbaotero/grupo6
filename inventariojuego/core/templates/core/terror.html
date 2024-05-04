@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Categoría: Terror</title>
+    <link rel="stylesheet" href="CSS/styles_terror.css">
+    <link rel="stylesheet" href="{% static 'CSS/styles_terror.css' %}">
+    <script src="Java/script.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Categoría: Terror</h1>
+        <p>¡Sumérgete en el horror con los juegos de arcade de terror! Enfrenta tus miedos mientras exploras entornos escalofriantes y te enfrentas a criaturas aterradoras en desafíos llenos de suspense y tensión, todo mientras luchas por sobrevivir hasta el final.</p>
+    </header>
+
+    <main>
+        <h2>Juegos de Terror</h2>
+        <div class="juego">
+            <a href="sub-categoria-terror/resident-evil-2.html">
+                <img src="https://image.api.playstation.com/vulcan/ap/rnd/202206/0204/uDFoGvnMTTCLVmTwjj0njGWC.png" alt="Residentevil2">
+                <h3>Resident Evil 2</h3>
+                <p>Valor: $36.500 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Resident Evil 2')">Agregar al carrito</button>
+        </div>
+
+        <div class="juego">
+            <a href="sub-categoria-terror/outlast.html">
+                <img src="https://cdn1.epicgames.com/offer/78f42129096d4233bccc527733debfbd/EGS_Outlast_RedBarrels_S2_1200x1600-b02ebdfb4bcd3b1d608ab5b87257b3c4" alt="Outlast">
+                <h3>Outlast</h3>
+                <p>Valor: $14.500 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Outlast')">Agregar al carrito</button>
+        </div>
+
+        <div class="juego">
+            <a href="sub-categoria-terror/poppy-playtime.html">
+                <img src="https://i.3djuegos.com/juegos/18221/poppy_playtime/fotos/ficha/poppy_playtime-5543028.jpg" alt="Poppyplaytime">
+                <h3>Poppy Playtime</h3>
+                <p>Valor: $28.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Poppy Playtime')">Agregar al carrito</button>
+        </div>
+        
+        <div class="juego">
+            <a href="sub-categoria-terror/among-the-sleep.html">
+                <img src="https://cdn1.epicgames.com/salesEvent/salesEvent/EGS_AmongtheSleepEnhancedEdition_KrillbiteStudioAS_S2_1200x1600-ba43835916e83b6cecc56b71af8e3eb1" alt="Amongthesleep">
+                <h3>Among the Sleep</h3>
+                <p>Valor: $15.990 CLP</p>
+            </a>
+            <button onclick="agregarAlCarrito('Among the Sleep')">Agregar al carrito</button>
+        </div>
+
+        <div class="buscar">
+            <input type="text" id="busqueda" placeholder="Buscar juego...">
+            <button onclick="buscarJuego()">Buscar</button>
+        </div>
+
+        <a href="{% url 'inicio' %}">Volver al Inicio</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Pirata Games</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        function agregarAlCarrito(nombreJuego) {
+            alert('Se ha añadido "' + nombreJuego + '" al carrito.');
+
+        }
+    </script>
+
+</body>
+</html>
